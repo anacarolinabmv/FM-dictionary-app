@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "compile": "sass --watch src/sass/main.scss src/css/style.css "
+  },
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+}
