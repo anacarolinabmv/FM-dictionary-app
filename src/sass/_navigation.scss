@@ -1,0 +1,34 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 5.8rem 0;
+
+  &__font {
+    margin-left: auto;
+  }
+}
+
+.dark-mode {
+  height: 2rem;
+  width: 7.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+
+  &__icon-box {
+    height: 2rem;
+    width: 3.2rem;
+    background-color: #757575;
+    mask-image: url(../../assets/images/icon-moon.svg);
+    -webkit-mask-image: url(../../assets/images/icon-moon.svg);
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+  }
+}

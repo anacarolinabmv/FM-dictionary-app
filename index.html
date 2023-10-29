@@ -11,6 +11,30 @@
     <title>Frontend Mentor | Dictionary web app</title>
   </head>
   <body>
-    <h1>ana</h1>
+    <nav class="navigation">
+      <img src="assets/images/logo.svg" alt="" class="navigation__logo" />
+      <div class="navigation__font">
+        <select name="" id="">
+          <option value="sans-serif">Sans Serif</option>
+          <option value="serif">Serif/option></option>
+          <option value="mono">Mono</option>
+        </select>
+      </div>
+      <div class="dark-mode">
+        <label class="toggle-switch">
+          <input type="checkbox" class="check" />
+          <span class="track"></span>
+        </label>
+        <div class="dark-mode__icon-box"></div>
+      </div>
+    </nav>
+
+    <section class="search">
+      <form>
+        <input type="text" class="search__input" id="search" placeholder="Search for any word..." />
+        <img src="assets/images/icon-search.svg" class="search__icon" alt="Search icon" />
+      </form>
+    </section>
+    <main class="definition"></main>
   </body>
 </html>
