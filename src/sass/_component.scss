@@ -1,9 +1,5 @@
 //SEARCH INPUT
 .search {
-  width: 100%;
-  max-width: 80rem;
-  margin: 0 auto;
-
   form {
     position: relative;
   }
@@ -77,12 +73,20 @@
   }
 }
 
-//VERTICAL LINE
+//VERTICAL AND HORIZONTAL LINES
 .vertical-line {
   height: 3.2rem;
   display: inline-block;
   background-color: $grey-light-1;
   width: 1px;
+}
+
+//VERTICAL LINE
+.horizontal-line {
+  height: 1px;
+  display: inline-block;
+  background-color: $grey-light-1;
+  width: 100%;
 }
 
 //DROPDOWN MENU
@@ -170,4 +174,27 @@
 .select-dropdown li .select-dropdown li:hover,
 .select-dropdown input:checked ~ label {
   color: $magenta;
+}
+
+//BUTTONS
+
+.btn-play {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  background-color: rgba($magenta, 0.25);
+  border: none;
+  cursor: pointer;
+  background-image: url(../../assets/images/icon-play.svg);
+  transition: 0.3s;
+  box-shadow: 0 1rem 2rem rgba($grey-dark-3, 0.12);
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  &:active {
+    transform: scale(0.96);
+    box-shadow: 0 1rem 1rem rgba($grey-dark-3, 0.18);
+  }
 }

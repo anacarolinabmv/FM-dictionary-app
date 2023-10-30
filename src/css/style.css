@@ -46,6 +46,19 @@
   margin-left: auto;
 }
 
+.search {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.main {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  margin-top: 4.5rem;
+}
+
 .dark-mode {
   height: 2rem;
   width: 7.4rem;
@@ -81,11 +94,6 @@ body {
   min-height: 100vh;
 }
 
-.search {
-  width: 100%;
-  max-width: 80rem;
-  margin: 0 auto;
-}
 .search form {
   position: relative;
 }
@@ -154,6 +162,13 @@ body {
   display: inline-block;
   background-color: #e9e9e9;
   width: 1px;
+}
+
+.horizontal-line {
+  height: 1px;
+  display: inline-block;
+  background-color: #e9e9e9;
+  width: 100%;
 }
 
 .dropdown {
@@ -235,6 +250,98 @@ body {
 .select-dropdown li .select-dropdown li:hover,
 .select-dropdown input:checked ~ label {
   color: #a445ed;
+}
+
+.btn-play {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  background-color: rgba(164, 69, 237, 0.25);
+  border: none;
+  cursor: pointer;
+  background-image: url(../../assets/images/icon-play.svg);
+  transition: 0.3s;
+  box-shadow: 0 1rem 2rem rgba(58, 58, 58, 0.12);
+}
+.btn-play:hover {
+  transform: scale(1.04);
+}
+.btn-play:active {
+  transform: scale(0.96);
+  box-shadow: 0 1rem 1rem rgba(58, 58, 58, 0.18);
+}
+
+.definition {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+.definition__btn {
+  grid-column: 2;
+  grid-row: 1/span 2;
+  align-self: center;
+}
+
+.phonetic {
+  margin-top: 0.8rem;
+  color: #a445ed;
+}
+
+.type {
+  display: flex;
+  align-items: center;
+  gap: 2.6rem;
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.meaning__heading {
+  color: #757575;
+}
+.meaning__list {
+  margin: 2.5rem 0 2.2rem;
+  list-style-type: none;
+}
+.meaning__list-item {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.meaning__list-item--sentence {
+  color: #757575;
+  margin-left: 3rem;
+}
+.meaning__list-item:not(:last-child) {
+  margin-bottom: 1.3rem;
+}
+.meaning__list-disc {
+  display: block;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  background-color: #a445ed;
+  flex-shrink: 0;
+}
+
+.synonym {
+  margin-top: 4rem;
+}
+.synonym__link:link, .synonym__link:visited {
+  color: #a445ed;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 2.2rem;
+}
+
+.source {
+  margin-top: 2rem;
+}
+.source__link:link, .source__link:visited {
+  color: #2d2d2d;
+  margin-left: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

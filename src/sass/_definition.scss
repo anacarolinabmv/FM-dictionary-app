@@ -1,0 +1,81 @@
+.definition {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+
+  &__btn {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+}
+
+.phonetic {
+  margin-top: 0.8rem;
+  color: $magenta;
+}
+
+.type {
+  display: flex;
+  align-items: center;
+  gap: 2.6rem;
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.meaning {
+  &__heading {
+    color: $grey;
+  }
+
+  &__list {
+    margin: 2.5rem 0 2.2rem;
+    list-style-type: none;
+  }
+  &__list-item {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+
+    &--sentence {
+      color: $grey;
+      margin-left: 3rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.3rem;
+    }
+  }
+
+  &__list-disc {
+    display: block;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background-color: $magenta;
+    flex-shrink: 0;
+  }
+}
+
+.synonym {
+  margin-top: 4rem;
+  &__link:link,
+  &__link:visited {
+    color: $magenta;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 2.2rem;
+  }
+}
+.source {
+  margin-top: 2rem;
+
+  &__link:link,
+  &__link:visited {
+    color: $grey-dark-2;
+    margin-left: 2rem;
+  }
+}
