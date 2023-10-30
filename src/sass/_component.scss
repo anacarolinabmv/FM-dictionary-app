@@ -129,6 +129,24 @@
   transform: translateY(-8rem);
   opacity: 0;
   visibility: hidden;
+
+  li {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+
+    label {
+      padding: 8px 10px;
+      cursor: pointer;
+    }
+  }
+
+  input[type='radio'] {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+  }
 }
 
 .select-dropdown.active {
@@ -137,23 +155,7 @@
   visibility: visible;
 }
 
-.select-dropdown li {
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  gap: 1rem;
-}
-
-.select-dropdown li label {
-  padding: 8px 10px;
-  cursor: pointer;
-}
-.select-dropdown li:hover,
+.select-dropdown li .select-dropdown li:hover,
 .select-dropdown input:checked ~ label {
   color: $magenta;
-}
-.select-dropdown input[type='radio'] {
-  position: absolute;
-  left: 0;
-  opacity: 0;
 }

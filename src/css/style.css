@@ -199,6 +199,21 @@ body {
   opacity: 0;
   visibility: hidden;
 }
+.select-dropdown li {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+}
+.select-dropdown li label {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+.select-dropdown input[type=radio] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
 
 .select-dropdown.active {
   transform: translateY(0);
@@ -206,27 +221,9 @@ body {
   visibility: visible;
 }
 
-.select-dropdown li {
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  gap: 1rem;
-}
-
-.select-dropdown li label {
-  padding: 8px 10px;
-  cursor: pointer;
-}
-
-.select-dropdown li:hover,
+.select-dropdown li .select-dropdown li:hover,
 .select-dropdown input:checked ~ label {
   color: #a445ed;
-}
-
-.select-dropdown input[type=radio] {
-  position: absolute;
-  left: 0;
-  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
