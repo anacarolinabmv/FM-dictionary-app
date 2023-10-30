@@ -24,13 +24,10 @@
   line-height: normal;
   margin-top: 4rem;
   margin-bottom: 4rem;
+  color: $grey-dark-2;
 }
 
 .meaning {
-  &__heading {
-    color: $grey;
-  }
-
   &__list {
     margin: 2.5rem 0 2.2rem;
     list-style-type: none;
@@ -72,6 +69,7 @@
 }
 .source {
   margin-top: 2rem;
+  color: $grey;
 
   &__link:link,
   &__link:visited {

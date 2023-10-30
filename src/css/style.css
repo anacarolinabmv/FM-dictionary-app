@@ -3,6 +3,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  color: #2d2d2d;
 }
 
 .heading-md {
@@ -17,6 +18,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  color: #757575;
 }
 
 .body-md {
@@ -24,6 +26,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 2.4rem;
+  color: #2d2d2d;
 }
 
 .body-sm {
@@ -297,11 +300,9 @@ body {
   line-height: normal;
   margin-top: 4rem;
   margin-bottom: 4rem;
+  color: #2d2d2d;
 }
 
-.meaning__heading {
-  color: #757575;
-}
 .meaning__list {
   margin: 2.5rem 0 2.2rem;
   list-style-type: none;
@@ -339,6 +340,7 @@ body {
 
 .source {
   margin-top: 2rem;
+  color: #757575;
 }
 .source__link:link, .source__link:visited {
   color: #2d2d2d;
