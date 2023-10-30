@@ -1,3 +1,4 @@
+//SEARCH INPUT
 .search {
   width: 100%;
   max-width: 80rem;
@@ -29,6 +30,7 @@
   }
 }
 
+//DARK MODE TOGGLE
 .toggle-switch {
   position: relative;
   display: block;
@@ -74,6 +76,7 @@
   }
 }
 
+//VERTICAL LINE
 .vertical-line {
   height: 3.2rem;
   display: inline-block;
@@ -81,6 +84,7 @@
   width: 1px;
 }
 
+//DROPDOWN MENU
 .dropdown {
   position: relative;
   min-width: 11rem;
@@ -88,7 +92,7 @@
   justify-content: flex-end;
 }
 
-.select-button {
+.select-btn {
   font-size: 1.8rem;
   border: none;
   color: $grey-dark-2;

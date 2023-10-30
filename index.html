@@ -3,18 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap"
+      rel="stylesheet" />
+
     <link rel="stylesheet" href="src/css/style.css" />
     <script defer src="src/script.js"></script>
-
     <title>Frontend Mentor | Dictionary web app</title>
   </head>
   <body>
     <nav class="navigation">
       <img src="assets/images/logo.svg" alt="" class="navigation__logo" />
+
       <div class="dropdown">
-        <button class="select-button">
+        <button class="select-btn">
           <span class="selected-value">Sans Serif</span>
           <span class="arrow"></span>
         </button>
@@ -33,7 +38,9 @@
           </li>
         </ul>
       </div>
+
       <span class="vertical-line"></span>
+
       <div class="dark-mode">
         <label class="toggle-switch">
           <input type="checkbox" class="check" />
