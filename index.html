@@ -6,20 +6,34 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
     <link rel="stylesheet" href="src/css/style.css" />
-    <script src="src/script.js"></script>
+    <script defer src="src/script.js"></script>
 
     <title>Frontend Mentor | Dictionary web app</title>
   </head>
   <body>
     <nav class="navigation">
       <img src="assets/images/logo.svg" alt="" class="navigation__logo" />
-      <div class="navigation__font">
-        <select name="" id="">
-          <option value="sans-serif">Sans Serif</option>
-          <option value="serif">Serif/option></option>
-          <option value="mono">Mono</option>
-        </select>
+      <div class="dropdown">
+        <button class="select-button">
+          <span class="selected-value">Sans Serif</span>
+          <span class="arrow"></span>
+        </button>
+        <ul class="select-dropdown">
+          <li>
+            <input type="radio" id="sans serif" name="font" checked />
+            <label for="sans serif">Sans Serif</label>
+          </li>
+          <li>
+            <input type="radio" id="serif" name="font" />
+            <label for="serif">Serif</label>
+          </li>
+          <li>
+            <input type="radio" id="mono" name="font" />
+            <label for="mono">Mono</label>
+          </li>
+        </ul>
       </div>
+      <span class="vertical-line"></span>
       <div class="dark-mode">
         <label class="toggle-switch">
           <input type="checkbox" class="check" />
