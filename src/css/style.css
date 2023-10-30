@@ -97,6 +97,7 @@ body {
   width: 100%;
   font-size: 2rem;
   color: #2d2d2d;
+  font-family: inherit;
 }
 .search__input:focus {
   outline: none;
@@ -198,6 +199,7 @@ body {
   transform: translateY(-8rem);
   opacity: 0;
   visibility: hidden;
+  font-weight: 700;
 }
 .select-dropdown li {
   position: relative;
@@ -213,6 +215,15 @@ body {
   position: absolute;
   left: 0;
   opacity: 0;
+}
+.select-dropdown #sans-serif ~ label {
+  font-family: "Inter", sans-serif;
+}
+.select-dropdown #serif ~ label {
+  font-family: "Lora", serif;
+}
+.select-dropdown #mono ~ label {
+  font-family: "Inconsolata", monospace;
 }
 
 .select-dropdown.active {

@@ -16,6 +16,7 @@
     width: 100%;
     font-size: 2rem;
     color: $grey-dark-2;
+    font-family: inherit;
 
     &:focus {
       outline: none;
@@ -129,6 +130,7 @@
   transform: translateY(-8rem);
   opacity: 0;
   visibility: hidden;
+  font-weight: 700;
 
   li {
     position: relative;
@@ -146,6 +148,16 @@
     position: absolute;
     left: 0;
     opacity: 0;
+  }
+
+  #sans-serif ~ label {
+    font-family: $sans;
+  }
+  #serif ~ label {
+    font-family: $serif;
+  }
+  #mono ~ label {
+    font-family: $mono;
   }
 }
 
