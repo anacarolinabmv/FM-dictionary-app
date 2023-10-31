@@ -35,6 +35,10 @@
     color: $grey-dark-2;
     font-family: inherit;
 
+    &::placeholder {
+      color: rgba($grey-dark-2, 0.25);
+    }
+
     &--error {
       border-color: $orange-red;
     }

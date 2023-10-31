@@ -95,6 +95,9 @@
   color: #2d2d2d;
   font-family: inherit;
 }
+.search__input::placeholder {
+  color: rgba(45, 45, 45, 0.25);
+}
 .search__input--error {
   border-color: #ff5252;
 }
