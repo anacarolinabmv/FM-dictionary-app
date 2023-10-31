@@ -1,0 +1,27 @@
+.not-found {
+  text-align: center;
+  display: none;
+
+  &__heading {
+    color: $grey-dark-2;
+    font-family: inherit;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 2.4rem;
+
+    .body.dark & {
+      color: $white;
+    }
+  }
+  &__emoji {
+    font-size: 6.4rem;
+    margin-bottom: 4.4rem;
+  }
+
+  &.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in;
+  }
+}

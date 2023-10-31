@@ -58,19 +58,33 @@
       <h3 class="heading-sm error-msg" id="error-msg">Whoops, can’t be empty…</h3>
     </section>
     <main class="main">
-      <div class="definition">
-        <h1 class="heading-lg" id="word"></h1>
-        <h2 class="heading-md phonetic" id="phonetic"></h2>
-        <button class="btn-play definition__btn"></button>
-      </div>
-      <div class="meaning" id="meaning"></div>
-      <div class="horizontal-line"></div>
-      <div class="source body-sm">
-        <span class="source__heading"
-          >Source
-          <a href="https://en.wiktionary.org/wiki/keyboard" class="source__link body-sm" id="source" target="_blank"></a
-        ></span>
-      </div>
+      <section class="not-found">
+        <p class="not-found__emoji">😕</p>
+        <h5 class="not-found__heading">No Definitions Found</h5>
+        <p class="body-md">
+          Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at
+          later time or head to the web instead.
+        </p>
+      </section>
+      <section class="found show">
+        <div class="definition">
+          <h1 class="heading-lg" id="word"></h1>
+          <h2 class="heading-md phonetic" id="phonetic"></h2>
+          <button class="btn-play definition__btn"></button>
+        </div>
+        <div class="meaning" id="meaning"></div>
+        <div class="horizontal-line"></div>
+        <div class="source body-sm">
+          <span class="source__heading"
+            >Source
+            <a
+              href="https://en.wiktionary.org/wiki/keyboard"
+              class="source__link body-sm"
+              id="source"
+              target="_blank"></a
+          ></span>
+        </div>
+      </section>
     </main>
   </body>
 </html>

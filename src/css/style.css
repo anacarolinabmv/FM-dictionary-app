@@ -347,6 +347,13 @@ body.dark {
   box-shadow: 0 1rem 1rem rgba(58, 58, 58, 0.18);
 }
 
+.found {
+  display: none;
+}
+.found.show {
+  display: block;
+}
+
 .definition {
   display: grid;
   grid-template-columns: 1fr max-content;
@@ -426,6 +433,31 @@ body.dark {
 .source__link:link, .source__link:visited {
   color: #2d2d2d;
   margin-left: 2rem;
+}
+
+.not-found {
+  text-align: center;
+  display: none;
+}
+.not-found__heading {
+  color: #2d2d2d;
+  font-family: inherit;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 2.4rem;
+}
+.body.dark .not-found__heading {
+  color: #fff;
+}
+.not-found__emoji {
+  font-size: 6.4rem;
+  margin-bottom: 4.4rem;
+}
+.not-found.show {
+  display: block;
+  animation: fadeIn 0.3s ease-in;
 }
 
 /*# sourceMappingURL=style.css.map */
