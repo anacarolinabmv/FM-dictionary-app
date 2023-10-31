@@ -291,15 +291,14 @@ body {
   width: 7.5rem;
   height: 7.5rem;
   border-radius: 50%;
-  background-color: rgba(164, 69, 237, 0.25);
   border: none;
   cursor: pointer;
   background-image: url(../../assets/images/icon-play.svg);
-  transition: 0.3s;
+  transition: all 0.3s;
   box-shadow: 0 1rem 2rem rgba(58, 58, 58, 0.12);
 }
 .btn-play:hover {
-  transform: scale(1.04);
+  background-image: url(../../assets/images/icon-play--white.svg);
 }
 .btn-play:active {
   transform: scale(0.96);
