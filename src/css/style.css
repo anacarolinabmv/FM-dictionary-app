@@ -340,7 +340,7 @@ body {
   align-items: center;
   gap: 2.5rem;
 }
-.meaning__list-item--sentence {
+.meaning__list-item--example {
   color: #757575;
   margin-left: 3rem;
 }
