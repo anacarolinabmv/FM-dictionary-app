@@ -70,14 +70,15 @@
 
 .dark-mode {
   height: 2rem;
-  width: 7.4rem;
+  width: 100%;
+  max-width: 8rem;
   display: flex;
   align-items: center;
   gap: 1.4rem;
 }
 .dark-mode__icon-box {
   height: 2rem;
-  width: 3.2rem;
+  width: 2rem;
   background-color: #757575;
   mask-image: url(../../assets/images/icon-moon.svg);
   -webkit-mask-image: url(../../assets/images/icon-moon.svg);
@@ -115,7 +116,7 @@
   color: rgba(255, 255, 255, 0.25);
 }
 .search__input--error {
-  border-color: #ff5252;
+  border-color: #ff5252 !important;
 }
 .search__input:focus {
   outline: none;
@@ -177,6 +178,7 @@ body.dark {
   display: block;
   height: 100%;
   width: 100%;
+  max-width: 4rem;
 }
 .toggle-switch .check {
   position: absolute;
@@ -188,7 +190,7 @@ body.dark {
   background-color: #a445ed;
 }
 .toggle-switch .check:checked ~ .track::before {
-  transform: translate(2.3rem, -50%);
+  transform: translate(2.1rem, -50%);
 }
 .toggle-switch .check:not(:checked) ~ .track:hover {
   background-color: #a445ed;

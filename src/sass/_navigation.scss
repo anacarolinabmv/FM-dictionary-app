@@ -1,13 +1,14 @@
 .dark-mode {
   height: 2rem;
-  width: 7.4rem;
+  width: 100%;
+  max-width: 8rem;
   display: flex;
   align-items: center;
   gap: 1.4rem;
 
   &__icon-box {
     height: 2rem;
-    width: 3.2rem;
+    width: 2rem;
     background-color: $grey;
     mask-image: url(../../assets/images/icon-moon.svg);
     -webkit-mask-image: url(../../assets/images/icon-moon.svg);
@@ -51,8 +52,9 @@
         color: rgba($white, 0.25);
       }
     }
+
     &--error {
-      border-color: $orange-red;
+      border-color: $orange-red !important ;
     }
 
     &:focus {
