@@ -29,6 +29,7 @@
     padding: 2rem 2.4rem;
     background-color: $grey-light-2;
     border-radius: 1.6rem;
+    font-weight: 700;
     width: 100%;
     font-size: 2rem;
     color: $grey-dark-2;
@@ -40,7 +41,8 @@
 
     &:focus {
       outline: none;
-      box-shadow: 0rem 1rem 2rem rgba($grey-dark-3, 0.2);
+      box-shadow: 0rem 1rem 2rem rgba($grey-dark-3, 0.1);
+      border-color: $magenta;
     }
   }
 
