@@ -25,6 +25,10 @@
   margin-top: 4rem;
   margin-bottom: 4rem;
   color: $grey-dark-2;
+
+  .body.dark & {
+    color: $white;
+  }
 }
 
 .meaning {
@@ -40,6 +44,10 @@
     &--example {
       color: $grey;
       margin-left: 3rem;
+
+      .body.dark & {
+        color: $grey;
+      }
     }
 
     &:not(:last-child) {
@@ -71,6 +79,9 @@
   margin-top: 2rem;
   color: $grey;
 
+  .body.dark & {
+    color: $grey;
+  }
   &__link:link,
   &__link:visited {
     color: $grey-dark-2;

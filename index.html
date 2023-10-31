@@ -14,7 +14,7 @@
     <script defer src="src/script.js"></script>
     <title>Frontend Mentor | Dictionary web app</title>
   </head>
-  <body>
+  <body class="body">
     <nav class="navigation">
       <img src="assets/images/logo.svg" alt="" class="navigation__logo" />
 
@@ -43,7 +43,7 @@
 
       <div class="dark-mode">
         <label class="toggle-switch">
-          <input type="checkbox" class="check" />
+          <input type="checkbox" class="check" id="check" />
           <span class="track"></span>
         </label>
         <div class="dark-mode__icon-box"></div>
@@ -65,9 +65,10 @@
       </div>
       <div class="meaning" id="meaning"></div>
       <div class="horizontal-line"></div>
-      <div class="source">
-        <span class="body-sm"
-          >Source <a href="https://en.wiktionary.org/wiki/keyboard" class="source__link" id="source" target="_blank"></a
+      <div class="source body-sm">
+        <span class="source__heading"
+          >Source
+          <a href="https://en.wiktionary.org/wiki/keyboard" class="source__link body-sm" id="source" target="_blank"></a
         ></span>
       </div>
     </main>

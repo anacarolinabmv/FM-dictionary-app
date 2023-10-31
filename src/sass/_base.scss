@@ -14,8 +14,12 @@ body {
   min-height: 100vh;
   padding: 0 5rem 5rem;
   font-family: $sans;
-
+  transition: 0.3s;
   animation: fadeIn 0.3s ease-in;
+
+  &.dark {
+    background-color: $black;
+  }
 }
 
 @keyframes fadeIn {

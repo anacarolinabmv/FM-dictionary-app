@@ -35,3 +35,9 @@ $serif: 'Lora', serif;
   font-weight: 400;
   line-height: normal;
 }
+
+.body.dark .heading-lg,
+.body.dark .body-md,
+.body.dark .body-sm {
+  color: $white;
+}

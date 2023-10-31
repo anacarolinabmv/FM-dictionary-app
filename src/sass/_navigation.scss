@@ -16,6 +16,10 @@
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
   }
+
+  .body.dark &__icon-box {
+    background-color: $magenta;
+  }
 }
 
 //SEARCH INPUT
@@ -39,6 +43,14 @@
       color: rgba($grey-dark-2, 0.25);
     }
 
+    .body.dark & {
+      background-color: $grey-dark-1;
+      color: $white;
+
+      &::placeholder {
+        color: rgba($white, 0.25);
+      }
+    }
     &--error {
       border-color: $orange-red;
     }
