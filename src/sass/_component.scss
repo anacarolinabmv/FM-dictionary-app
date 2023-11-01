@@ -222,6 +222,11 @@
   padding: 6rem;
   display: none;
 
+  .spinner_OSmW {
+    transform-origin: center;
+    animation: loadingSpin 1s infinite linear;
+  }
+
   &.show {
     display: flex;
   }
