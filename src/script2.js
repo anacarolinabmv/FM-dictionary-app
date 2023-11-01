@@ -1,23 +1,9 @@
-//ELEMENT SELECTION
-
-const body = document.querySelector('body');
-
-const form = document.querySelector('form');
-const inputSearch = document.getElementById('search');
-const errorEmtpyInput = document.getElementById('error-msg');
-
-const wordEl = document.getElementById('word');
-const phoneticEl = document.getElementById('phonetic');
-const meaningEl = document.getElementById('meaning');
-const sourceEl = document.getElementById('source');
-
-const btnPlay = document.getElementById('btn-play');
-const audio = document.getElementById('audio');
-
 //*** FUNCTIONS ***
 
 //TOGGLE DARK MODE
+const body = document.querySelector('body');
 const btnToggleDarkMode = document.getElementById('check');
+
 const toggleDarkMode = function () {
   body.classList.toggle('dark');
 };
@@ -69,29 +55,73 @@ btnOpenDropdown.addEventListener('keydown', (e) => {
 //------------------------------------------------------------------//
 
 //HANDLE SEARCH INPUT VALIDATION
-const showEmptyImputError = function (action) {
-  inputSearch.classList.add('search__input--error');
-  errorEmtpyInput.classList.add('show');
+
+const form = document.querySelector('form');
+const inputSearch = document.getElementById('search');
+const inputErrorMsg = document.getElementById('error-msg');
+
+const handleInputError = function (action) {
+  if (action === 'show') {
+    inputSearch.classList.add('search__input--error');
+    inputErrorMsg.classList.add('show');
+  }
+  if (action === 'hide') {
+    inputSearch.classList.remove('search__input--error');
+    inputErrorMsg.classList.remove('show');
+  }
 };
 
-const hideEmptyImputError = function () {
-  inputSearch.classList.remove('search__input--error');
-  errorEmtpyInput.classList.remove('show');
-};
-
-form.addEventListener('submit', function (e) {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (!inputSearch.value) showEmptyImputError();
+  handleContainer(wordDefinitionContainer, 'hide');
+  handleContainer(wordNotFoundContainer, 'hide');
+  renderLoadingSpinner('show');
+
+  if (!inputSearch.value) {
+    handleInputError('show');
+    renderLoadingSpinner('hide');
+    return;
+  }
 
   requestDefinition(inputSearch.value);
 });
 
-inputSearch.addEventListener('focus', hideEmptyImputError);
+inputSearch.addEventListener('input', () => {
+  handleInputError('hide');
+});
+
+body.addEventListener('click', (e) => {
+  handleInputError('hide');
+
+  if ([...btnOpenDropdown.children].includes(e.target) || e.target === btnOpenDropdown) return;
+  dropdownList.classList.remove('active');
+});
 
 //REQUEST AND DISPLAY DATA
 
 const wordNotFoundContainer = document.querySelector('.not-found');
 const wordDefinitionContainer = document.querySelector('.found');
+const loadingSpinner = document.getElementById('loading-spinner');
+
+const wordEl = document.getElementById('word');
+const phoneticEl = document.getElementById('phonetic');
+const meaningEl = document.getElementById('meaning');
+const sourceEl = document.getElementById('source');
+
+const renderLoadingSpinner = function (action) {
+  if (action === 'show') loadingSpinner.classList.add('show');
+  if (action === 'hide') loadingSpinner.classList.remove('show');
+};
+
+const handleContainer = function (containerEl, action) {
+  if (action === 'show') containerEl.classList.add('show');
+  if (action === 'hide') containerEl.classList.remove('show');
+};
+
+const handleReject = function () {
+  handleContainer(wordDefinitionContainer, 'hide');
+  handleContainer(wordNotFoundContainer, 'show');
+};
 
 const requestDefinition = async function (wordInp) {
   try {
@@ -100,23 +130,19 @@ const requestDefinition = async function (wordInp) {
 
     const [data] = await request.json();
 
+    renderLoadingSpinner('hide');
     displayDefinition(data);
   } catch {
+    renderLoadingSpinner('hide');
     handleReject();
   }
 };
-
 requestDefinition('keyboard');
 
-const handleReject = function () {
-  wordDefinitionContainer.classList.remove('show');
-  wordNotFoundContainer.classList.add('show');
-};
-
 const displayDefinition = async function (data) {
-  wordNotFoundContainer.classList.remove('show');
-  wordDefinitionContainer.classList.add('show');
-  let arr = [];
+  handleContainer(wordNotFoundContainer, 'hide');
+  handleContainer(wordDefinitionContainer, 'show');
+
   meaningEl.innerHTML = '';
   wordEl.textContent = data.word;
   phoneticEl.textContent = data.phonetic;
@@ -155,24 +181,21 @@ const displayDefinition = async function (data) {
          ${getMeaningsList(meaning)}       
         </ul>
 
-        ${meaning.synonyms <= 0 ? '' : `<div class="heading-sm synonym">Synonyms ${getSynonimsList(meaning)}</div>`}
-          
-       
+        ${
+          meaning.synonyms <= 0 ? '' : `<div class="heading-sm synonym">Synonyms ${getSynonimsList(meaning)}</div>`
+        }           
         `;
-    arr = '';
+
     meaningEl.insertAdjacentHTML('beforeend', markup);
   });
 };
 
-// *** EVENT LISTENERS ***
-
-body.addEventListener('click', (e) => {
-  hideEmptyImputError();
-
-  if ([...btnOpenDropdown.children].includes(e.target) || e.target === btnOpenDropdown) return;
-  dropdownList.classList.remove('active');
-});
+// *** PLAY AUDIO ***
+const btnPlay = document.getElementById('btn-play');
+const audio = document.getElementById('audio');
 
 btnPlay.addEventListener('click', () => {
   audio.play();
 });
+
+// *** EVENT LISTENERS ***

@@ -214,3 +214,15 @@
     box-shadow: 0 1rem 1rem rgba($grey-dark-3, 0.18);
   }
 }
+
+//LOADING SPINNER
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  padding: 6rem;
+  display: none;
+
+  &.show {
+    display: flex;
+  }
+}
