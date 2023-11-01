@@ -170,10 +170,13 @@
   box-shadow: 0rem 1rem 2rem rgba(58, 58, 58, 0.1);
   border-color: #a445ed;
 }
-.search__icon {
+.search__btn {
   position: absolute;
   top: 50%;
   transform: translate(-4.2rem, -50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .error-msg {

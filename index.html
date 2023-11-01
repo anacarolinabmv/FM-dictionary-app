@@ -12,12 +12,12 @@
       rel="stylesheet" />
 
     <link rel="stylesheet" href="src/css/style.css" />
-    <script defer type="module" src="src/script2.js"></script>
+    <script defer type="module" src="src/js/script.js"></script>
     <title>Frontend Mentor | Dictionary web app</title>
   </head>
   <body class="body">
     <nav class="navigation">
-      <img src="assets/images/logo.svg" alt="" class="navigation__logo" />
+      <img src="assets/images/logo.svg" alt="Logo" class="navigation__logo" />
 
       <div class="dropdown">
         <button class="select-btn">
@@ -54,7 +54,9 @@
     <section class="search">
       <form>
         <input type="text" class="search__input" id="search" placeholder="Search for any word..." autocomplete="off" />
-        <img src="assets/images/icon-search.svg" class="search__icon" alt="Search icon" />
+        <button type="submit" class="search__btn">
+          <img src="assets/images/icon-search.svg" class="search__icon" alt="Search icon" />
+        </button>
       </form>
       <h3 class="heading-sm error-msg" id="error-msg">Whoops, can’t be empty…</h3>
     </section>
