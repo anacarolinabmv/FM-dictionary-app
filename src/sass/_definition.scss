@@ -36,6 +36,12 @@
   .body.dark & {
     color: $white;
   }
+
+  @media (max-width: 25em) {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .meaning {

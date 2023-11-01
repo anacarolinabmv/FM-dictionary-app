@@ -89,6 +89,11 @@
   justify-content: space-between;
   align-items: center;
 
+  @media (max-width: 25em) {
+    font-size: 1.4rem;
+    gap: 1.2rem;
+  }
+
   .body.dark & {
     color: $white;
   }
@@ -119,6 +124,10 @@
   opacity: 0;
   visibility: hidden;
   font-weight: 700;
+
+  @media (max-width: 25em) {
+    font-size: 1.4rem;
+  }
 
   .body.dark & {
     background-color: $grey-dark-1;
@@ -179,9 +188,19 @@
   border: none;
   cursor: pointer;
   background-image: url(../../assets/images/icon-play.svg);
+  background-size: cover;
   background-color: $white;
   transition: all 0.3s;
   box-shadow: 0 1rem 2rem rgba($grey-dark-3, 0.12);
+
+  @media (max-width: 37.5em) {
+    width: 6rem;
+    height: 6rem;
+  }
+  @media (max-width: 25em) {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
 
   .body.dark & {
     background-color: $grey-dark-1;

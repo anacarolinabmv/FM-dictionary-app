@@ -40,6 +40,10 @@
     color: $grey-dark-2;
     font-family: inherit;
 
+    @media (max-width: 25em) {
+      font-size: 1.6rem;
+      padding: 1.4rem 2.4rem;
+    }
     &::placeholder {
       color: rgba($grey-dark-2, 0.25);
     }

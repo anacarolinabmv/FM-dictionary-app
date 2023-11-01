@@ -8,6 +8,11 @@
   margin: 0 auto;
   padding: 5.8rem 0;
 
+  @media (max-width: 25em) {
+    padding: 2.8rem 0;
+    gap: 1.3rem;
+  }
+
   .dropdown {
     margin-left: auto;
   }
@@ -24,4 +29,8 @@
   max-width: 80rem;
   margin: 0 auto;
   margin-top: 4.5rem;
+
+  @media (max-width: 25em) {
+    margin-top: 2.4rem;
+  }
 }

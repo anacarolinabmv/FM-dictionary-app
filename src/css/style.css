@@ -5,12 +5,27 @@
   line-height: normal;
   color: #2d2d2d;
 }
+@media (max-width: 37.5em) {
+  .heading-lg {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 25em) {
+  .heading-lg {
+    font-size: 3.2rem;
+  }
+}
 
 .heading-md {
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media (max-width: 25em) {
+  .heading-md {
+    font-size: 1.6rem;
+  }
 }
 
 .heading-sm {
@@ -20,6 +35,11 @@
   line-height: normal;
   color: #757575;
 }
+@media (max-width: 25em) {
+  .heading-sm {
+    font-size: 1.6rem;
+  }
+}
 
 .body-md {
   font-size: 1.8rem;
@@ -28,12 +48,22 @@
   line-height: 2.4rem;
   color: #2d2d2d;
 }
+@media (max-width: 25em) {
+  .body-md {
+    font-size: 1.5rem;
+  }
+}
 
 .body-sm {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media (max-width: 25em) {
+  .body-sm {
+    font-size: 1.4rem;
+  }
 }
 
 .body.dark .heading-lg,
@@ -51,6 +81,12 @@
   margin: 0 auto;
   padding: 5.8rem 0;
 }
+@media (max-width: 25em) {
+  .navigation {
+    padding: 2.8rem 0;
+    gap: 1.3rem;
+  }
+}
 .navigation .dropdown {
   margin-left: auto;
 }
@@ -66,6 +102,11 @@
   max-width: 80rem;
   margin: 0 auto;
   margin-top: 4.5rem;
+}
+@media (max-width: 25em) {
+  .main {
+    margin-top: 2.4rem;
+  }
 }
 
 .dark-mode {
@@ -104,6 +145,12 @@
   font-size: 2rem;
   color: #2d2d2d;
   font-family: inherit;
+}
+@media (max-width: 25em) {
+  .search__input {
+    font-size: 1.6rem;
+    padding: 1.4rem 2.4rem;
+  }
 }
 .search__input::placeholder {
   color: rgba(45, 45, 45, 0.25);
@@ -163,6 +210,16 @@ body {
 }
 body.dark {
   background-color: #050505;
+}
+@media (max-width: 37.5em) {
+  body {
+    padding: 0 3rem 3rem;
+  }
+}
+@media (max-width: 25em) {
+  body {
+    padding: 0 2.4rem 3rem;
+  }
 }
 
 @keyframes fadeIn {
@@ -253,6 +310,12 @@ body.dark {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 25em) {
+  .select-btn {
+    font-size: 1.4rem;
+    gap: 1.2rem;
+  }
+}
 .body.dark .select-btn {
   color: #fff;
 }
@@ -282,6 +345,11 @@ body.dark {
   opacity: 0;
   visibility: hidden;
   font-weight: 700;
+}
+@media (max-width: 25em) {
+  .select-dropdown {
+    font-size: 1.4rem;
+  }
 }
 .body.dark .select-dropdown {
   background-color: #1f1f1f;
@@ -334,9 +402,22 @@ body.dark {
   border: none;
   cursor: pointer;
   background-image: url(../../assets/images/icon-play.svg);
+  background-size: cover;
   background-color: #fff;
   transition: all 0.3s;
   box-shadow: 0 1rem 2rem rgba(58, 58, 58, 0.12);
+}
+@media (max-width: 37.5em) {
+  .btn-play {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media (max-width: 25em) {
+  .btn-play {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
 }
 .body.dark .btn-play {
   background-color: #1f1f1f;
@@ -385,6 +466,13 @@ body.dark {
 }
 .body.dark .part-of-speech {
   color: #fff;
+}
+@media (max-width: 25em) {
+  .part-of-speech {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .meaning__list {
