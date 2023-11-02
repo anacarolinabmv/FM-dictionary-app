@@ -430,6 +430,10 @@ body.dark {
   justify-content: center;
   padding: 6rem;
   display: none;
+  fill: #2d2d2d;
+}
+.body.dark .loading-spinner {
+  fill: #a445ed;
 }
 .loading-spinner .spinner_OSmW {
   transform-origin: center;

@@ -221,6 +221,11 @@
   justify-content: center;
   padding: 6rem;
   display: none;
+  fill: $grey-dark-2;
+
+  .body.dark & {
+    fill: $magenta;
+  }
 
   .spinner_OSmW {
     transform-origin: center;
