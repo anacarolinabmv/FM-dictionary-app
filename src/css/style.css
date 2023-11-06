@@ -429,7 +429,6 @@ body.dark {
   display: flex;
   justify-content: center;
   padding: 6rem;
-  display: none;
   fill: #2d2d2d;
 }
 .body.dark .loading-spinner {
@@ -439,15 +438,9 @@ body.dark {
   transform-origin: center;
   animation: loadingSpin 1s infinite linear;
 }
-.loading-spinner.show {
-  display: flex;
-}
 
 .found {
-  display: none;
-}
-.found.show {
-  display: block;
+  animation: fadeIn 0.3s ease-in;
 }
 
 .definition {
@@ -540,7 +533,6 @@ body.dark {
 
 .not-found {
   text-align: center;
-  display: none;
 }
 .not-found__heading {
   color: #2d2d2d;
@@ -557,10 +549,6 @@ body.dark {
 .not-found__emoji {
   font-size: 6.4rem;
   margin-bottom: 4.4rem;
-}
-.not-found.show {
-  display: block;
-  animation: fadeIn 0.3s ease-in;
 }
 
 @keyframes fadeIn {

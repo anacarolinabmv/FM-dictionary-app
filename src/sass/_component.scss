@@ -220,7 +220,6 @@
   display: flex;
   justify-content: center;
   padding: 6rem;
-  display: none;
   fill: $grey-dark-2;
 
   .body.dark & {
@@ -230,9 +229,5 @@
   .spinner_OSmW {
     transform-origin: center;
     animation: loadingSpin 1s infinite linear;
-  }
-
-  &.show {
-    display: flex;
   }
 }

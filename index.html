@@ -16,9 +16,14 @@
     <title>Frontend Mentor | Dictionary web app</title>
   </head>
   <body class="body">
+    <script>
+      const playAudio = function () {
+        document.getElementById('audio').play();
+      };
+    </script>
+
     <nav class="navigation">
       <img src="assets/images/logo.svg" alt="Logo" class="navigation__logo" />
-
       <div class="dropdown">
         <button class="select-btn">
           <span class="selected-value">Sans Serif</span>
@@ -52,7 +57,7 @@
     </nav>
 
     <section class="search">
-      <form>
+      <form id="form">
         <input type="text" class="search__input" id="search" placeholder="Search for any word..." autocomplete="off" />
         <button type="submit" class="search__btn">
           <img src="assets/images/icon-search.svg" class="search__icon" alt="Search icon" />
@@ -61,48 +66,8 @@
       <h3 class="heading-sm error-msg" id="error-msg">Whoops, can’t be empty…</h3>
     </section>
     <main class="main">
-      <div class="loading-spinner" id="loading-spinner">
-        <svg width="60" height="60" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <g class="spinner_OSmW">
-            <rect x="11" y="1" width="2" height="5" opacity=".14" />
-            <rect x="11" y="1" width="2" height="5" transform="rotate(30 12 12)" opacity=".29" />
-            <rect x="11" y="1" width="2" height="5" transform="rotate(60 12 12)" opacity=".43" />
-            <rect x="11" y="1" width="2" height="5" transform="rotate(90 12 12)" opacity=".57" />
-            <rect x="11" y="1" width="2" height="5" transform="rotate(120 12 12)" opacity=".71" />
-            <rect x="11" y="1" width="2" height="5" transform="rotate(150 12 12)" opacity=".86" />
-            <rect x="11" y="1" width="2" height="5" transform="rotate(180 12 12)" />
-          </g>
-        </svg>
-      </div>
-      <section class="not-found">
-        <p class="not-found__emoji">😕</p>
-        <h5 class="not-found__heading">No Definitions Found</h5>
-        <p class="body-md">
-          Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at
-          later time or head to the web instead.
-        </p>
-      </section>
-      <section class="found show">
-        <div class="definition">
-          <h1 class="heading-lg" id="word"></h1>
-          <h2 class="heading-md phonetic" id="phonetic"></h2>
-          <button class="btn-play definition__btn" id="btn-play">
-            <audio src="https://api.dictionaryapi.dev/media/pronunciations/en/keyboard-us.mp3" id="audio"></audio>
-          </button>
-        </div>
-        <div class="meaning" id="meaning"></div>
-        <div class="horizontal-line"></div>
-        <div class="source body-sm">
-          <span class="source__heading"
-            >Source
-            <a
-              href="https://en.wiktionary.org/wiki/keyboard"
-              class="source__link body-sm"
-              id="source"
-              target="_blank"></a
-          ></span>
-        </div>
-      </section>
+      <!-- <section class="not-found"></section> -->
+      <!-- <section class="found"></section> -->
     </main>
   </body>
 </html>

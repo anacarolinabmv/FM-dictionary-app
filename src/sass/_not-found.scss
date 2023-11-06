@@ -1,6 +1,5 @@
 .not-found {
   text-align: center;
-  display: none;
 
   &__heading {
     color: $grey-dark-2;
@@ -18,10 +17,5 @@
   &__emoji {
     font-size: 6.4rem;
     margin-bottom: 4.4rem;
-  }
-
-  &.show {
-    display: block;
-    animation: fadeIn 0.3s ease-in;
   }
 }
