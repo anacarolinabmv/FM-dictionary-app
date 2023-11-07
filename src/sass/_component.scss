@@ -69,7 +69,7 @@
 }
 
 //DROPDOWN MENU
-.dropdown {
+.dropdown-menu {
   position: relative;
   min-width: 11rem;
   display: flex;
@@ -88,6 +88,10 @@
   gap: 1.6rem;
   justify-content: space-between;
   align-items: center;
+
+  &:focus {
+    outline: none;
+  }
 
   @media (max-width: 25em) {
     font-size: 1.4rem;

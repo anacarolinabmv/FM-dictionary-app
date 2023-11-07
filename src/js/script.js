@@ -1,11 +1,9 @@
-import { renderLoadingSpinner } from './loadingSpinner.js';
+import { renderLoadingSpinner } from './renderView.js';
 import { requestDefinition } from './requestDefinition.js';
 import * as dark from './darkMode.js';
 
 const body = document.querySelector('body');
 const main = document.querySelector('.main');
-
-//------------------------------------------------------------------//
 
 //HANDLE CHANGE THE FONT
 const btnOpenDropdown = document.querySelector('.select-btn');
@@ -15,10 +13,6 @@ const dropdownOptions = document.querySelectorAll('li label');
 
 const showDropdown = function () {
   dropdownList.classList.toggle('active');
-};
-
-const setFont = function (font) {
-  body.style.fontFamily = font;
 };
 
 dropdownOptions.forEach((item) => {
@@ -31,7 +25,7 @@ dropdownOptions.forEach((item) => {
       if (font === 'serif') return "'Lora', serif";
     };
 
-    setFont(selectFont(item.textContent.toLowerCase().split(' ')[0]));
+    body.style.fontFamily = selectFont(item.textContent.toLowerCase().split(' ')[0]);
   });
 });
 
@@ -58,16 +52,15 @@ const handleInputError = function (action) {
   }
 };
 
-//Event Listeners
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  renderLoadingSpinner(main);
 
   if (!inputSearch.value) {
     handleInputError('show');
     return;
   }
 
+  renderLoadingSpinner(main);
   requestDefinition(inputSearch.value);
 });
 
@@ -79,6 +72,7 @@ body.addEventListener('click', (e) => {
   dropdownList.classList.remove('active');
 });
 
+//INIT FUNCTION
 function init() {
   requestDefinition('keyboard');
 
